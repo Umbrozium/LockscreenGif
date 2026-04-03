@@ -339,6 +339,10 @@ public sealed partial class MainPage : Page
             Content = $"Original ({_videoFps:F2} fps)",
             Tag = _videoFps
         });
+        if (_videoFps > 60)
+        {
+            ComboFps.Items.Add(new ComboBoxItem { Content = "60 fps", Tag = 60.0 });
+        }
         if (_videoFps > 30)
         {
             ComboFps.Items.Add(new ComboBoxItem { Content = "30 fps", Tag = 30.0 });
