@@ -8,8 +8,7 @@ public static class TempDirectoryService
     public static string GetAppTempRoot()
     {
         var root = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "LockscreenGif",
+            AppContext.BaseDirectory,
             "Temp");
 
         Directory.CreateDirectory(root);
